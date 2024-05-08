@@ -1,0 +1,52 @@
+.form {
+    padding: 40px 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        option {
+            width: 100%;
+            padding: 8px 16px;
+            font-size: 18px;
+            outline: none;
+            border: 1px solid #0005;
+        }
+    }
+
+    &__btn {
+        border: 1px solid blue;
+        background: blue;
+        border-radius: 10px;
+        color: white;
+        transition: .4s;
+
+        &:hover {
+            background: white;
+            color: blue;
+        }
+    }
+}
+
+@media (max-width:630px) {
+    .form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
